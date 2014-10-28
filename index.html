@@ -3,47 +3,38 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <title>Revolver.js</title>
+    <title>jquery.countdown.js</title>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery.countdown.js"></script>
     <script type="text/javascript">
     $(function() {
-        $(document).on('click', '#bear', function() {
-            console.log('bear');
-            $("#bear").countdown({
-                seconds: 5
+        $(document).on('click', '#button', function() {
+            $("#button").countdown({
+                seconds: 15,
+				template: "#button_message"
+            });
+        });
+        $(document).on('click', '#link', function() {
+            $("#link").countdown({
+                seconds: 10,
+				template: "#link_message"
             });
         });
 
     });
-    var js = "javascript";
-    hill();
-    function hill(){
-        console.log("hill:"+js);
-    }
-
     </script>
-    <script type="text/template" id="countdown_message">
+    <script type="text/template" id="button_message">
         <b>{seconds}</b>秒后重新发送
     </script>
-    <script type="text/javascript">
-    jQuery(document).ready(function($) {
-        // var cardTemplate = $("#cardTemplate").html();
-        // var template = cardTemplate.format({"link":"http://example.com","title":"Link Title"});
-        // $("#container").append(template);
-    });
+    <script type="text/template" id="link_message">
+		You have <i>{seconds}</i> seconds remaining
     </script>
 </head>
 
 <body>
-    <div id="countdown"><i>countdown</i>
-    </div>
-    <div id="wes">wes</div>
-    <div id="container">container</div>
-    <div id="bear_wrap">
-        <input type="button" id="bear" value="BEAR" />
-    </div>
+	<a href="#" id="link">link</a>
+	<hr />
+    <input type="button" id="button" value="button" />
 </body>
 
 </html>
