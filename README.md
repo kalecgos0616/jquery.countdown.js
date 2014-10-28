@@ -39,5 +39,5 @@ $(function() {
 </script>
 ```
 
-######note: <script type="text/template" id="id"> is important that replace DOM during countdown. You can customize your HTML structure there.
+######note: &gt;script type="text/template" id="id"&lt; is important that replace DOM during countdown. You can customize your HTML structure there.
 
