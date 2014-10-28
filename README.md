@@ -18,13 +18,13 @@ jquery.countdown.js
 $(function() {
     $(document).on('click', '#button', function() {
         $("#button").countdown({
-            seconds: 15,
+            seconds: 15,	// waiting 15 sec
             template: "#button_message"
         });
     });
     $(document).on('click', '#link', function() {
         $("#link").countdown({
-            seconds: 10,
+            seconds: 10,	// waiting 10 sec
             template: "#link_message"
         });
     });
@@ -41,3 +41,9 @@ $(function() {
 
 ######note: &lt;script type="text/template" id="id"&gt; is important that replace DOM during countdown. You can customize your HTML structure there.
 
+####reference: 
+***
+http://stackoverflow.com/questions/3432969/lightweight-jquery-countdown
+http://learn.jquery.com/plugins/basic-plugin-creation/
+http://stackoverflow.com/questions/6118778/jquery-replacewith-find-new-element
+http://stackoverflow.com/questions/14062368/new-recommended-jquery-templates
