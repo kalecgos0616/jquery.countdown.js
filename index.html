@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Revolver.js</title>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.countdown.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $(document).on('click', '#bear', function() {
+            console.log('bear');
+            $("#bear").countdown({
+                seconds: 5
+            });
+        });
+
+    });
+    var js = "javascript";
+    hill();
+    function hill(){
+        console.log("hill:"+js);
+    }
+
+    </script>
+    <script type="text/template" id="countdown_message">
+        <b>{seconds}</b>秒后重新发送
+    </script>
+    <script type="text/javascript">
+    jQuery(document).ready(function($) {
+        // var cardTemplate = $("#cardTemplate").html();
+        // var template = cardTemplate.format({"link":"http://example.com","title":"Link Title"});
+        // $("#container").append(template);
+    });
+    </script>
+</head>
+
+<body>
+    <div id="countdown"><i>countdown</i>
+    </div>
+    <div id="wes">wes</div>
+    <div id="container">container</div>
+    <div id="bear_wrap">
+        <input type="button" id="bear" value="BEAR" />
+    </div>
+</body>
+
+</html>
